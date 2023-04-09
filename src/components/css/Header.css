@@ -1,1 +1,3 @@
-g
+.headerContainer {
+    grid-row:1/2;
+}

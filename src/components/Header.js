@@ -1,6 +1,8 @@
+import "./css/Header.css";
+
 function Header() {
     return(
-        <div>
+        <div className="headerContainer">
             <h1>calculator</h1>
         </div>
     );
