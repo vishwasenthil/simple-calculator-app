@@ -1,7 +1,9 @@
 import React, {useState, useRef} from "react";
+import InputForm from "./components/InputForm"
 import './App.css';
 
 function App() {
+  /*
   let [answer, setAnswer] = useState(0);
   let [input, setInput] = useState(0);
 
@@ -9,7 +11,9 @@ function App() {
   let [currOperator, setCurrOperator] = useState(``);
 
   let memory = useRef([]);
+  */
 
+  /*
   function handleClick(e) {
     //TODO: finish function
     e.preventDefault();
@@ -40,11 +44,12 @@ function App() {
     if(currOperator != `ac`) {
       memory.current = [...memory.current, {
         equation:`${answer+currOperator+input}`,
-        answer:answer
+        answer:answer //TODO: storing wrong value for answer
       }];
     }
     console.log(memory.current);
   }
+  */
 
   return (
     <>
@@ -52,17 +57,7 @@ function App() {
         <h1>calculator</h1>
       </header>
       <main>
-        <form onSubmit={handleClick}>
-          <input type="number" value={input} onChange={e=>setInput(e.target.value)}/>
-          <p>{answer}</p>
-          {
-            operators.map(operator=>{
-              return (
-                <button key={operator} type="submit" onClick={()=>setCurrOperator(operator)}>{operator}</button>
-              );
-            })
-          }
-        </form>
+        <InputForm/>
       </main>
     </>
   );
